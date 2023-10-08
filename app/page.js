@@ -1,95 +1,69 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+// import Create from '@/components/Create';
+// import Show from '@/components/Show';
+import Navbar from '@/components/Navbar';
+import React, { useState } from 'react'
 
-export default function Home() {
+
+
+function page() {
+  const [title, settitle] = useState("");
+  const [description, setdescription] = useState("");
+  const [status, setstatus] = useState("Due");
+  const [task, settask] = useState([]);
+  const [activetask, setactivetask] = useState(null);
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <div className='container'>
+      <Navbar/>
+      {/* <Create 
+        title={title}
+        settitle={settitle}
+        description={description}
+        setdescription={setdescription}
+        status={status}
+        setstatus={setstatus}
+        activetask={activetask}
+        setactivetask={setactivetask}
+        task={task}
+        settask={settask}
+      /> */}
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      {/* <center><h2 className='bg-info-subtle col-3 rounded'>Your Tasks</h2></center>
+      <Show
+          title={title}
+          settitle={settitle}
+          description={description}
+          setdescription={setdescription}
+          status={status}
+          setstatus={setstatus}
+          activetask={activetask}
+          setactivetask={setactivetask}
+          task={task}
+          settask={settask} 
+      /> */}
+    </div>
   )
 }
+
+export default page
+
+
+
+
+// real dom
+// virtual dom
+// reconsiation
+// 1 updating
+// 2 rendering
+
+
+// default export => export default name,    import anyname from "path";
+// const export  => export const user ,  import {user } from "path";
+// combine export => export { user , admin } from  "path";
+
+
+// usestate use for make variables of react 
+// two way binding
+// toastify for attractive alerts
+// JSON.stringfy = for convert  data 

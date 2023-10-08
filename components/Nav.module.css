@@ -1,0 +1,41 @@
+.main{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.effect{
+    position: absolute;
+}
+.effect:nth-child(1){
+    height: 12vw;
+    width: 12vw;
+    top: 10%;
+    left: -5%;
+    opacity: 0;
+}
+/* red */
+.effect:nth-child(3){
+    height: 15vw;
+    width: 15vw;
+    top: 20%;
+    right : 20%;
+    opacity: 0.3;
+    z-index: -1;
+}
+/* yellow */
+.effect:nth-child(4){
+    height: 15vw;
+    width: 15vw;
+    bottom: 10%;
+    right: 0%;
+    opacity: 0.6;
+
+}
+/* blue */
+.effect:nth-child(5){
+    height: 15vw;
+    width: 15vw;
+    top: 60%;
+    left: 0%;
+    opacity: 0.5;
+}
